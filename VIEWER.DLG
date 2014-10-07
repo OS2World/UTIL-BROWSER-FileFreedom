@@ -1,0 +1,24 @@
+DLGINCLUDE 7 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE VIEWERCFGID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Configure Viewers", VIEWERCFGID, 0,0,0,0, NOT
+            FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        LTEXT           "File Extensions", -1, 78, 100, 69, 8
+        LTEXT           "Viewer Name", -1, 12, 92, 60, 8
+        PUSHBUTTON      "Cancel", VIEWERCANCELID, 84, 11, 36, 14
+        PUSHBUTTON      "Defaults", VIEWERDEFAULTSID, 10, 7, 43, 14
+        CONTROL         "", VIEWERTYPEID, 86, 2, 54, 95, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        ENTRYFIELD      "", VIEWEREDITID, 12, 80, 62, 8, ES_MARGIN
+        PUSHBUTTON      "Delete Selection", VIEWERDELETEID, 71, 56, 79, 14
+        DEFPUSHBUTTON   "Accept", VIEWERACCEPTID, 10, 56, 39, 14
+        LTEXT           "Add Extension", -1, 82, 42, 63, 8
+        ENTRYFIELD      "", VIEWERADDEXTID, 86, 31, 41, 8, ES_MARGIN
+        GROUPBOX        "", -1, 6, 74, 144, 41
+        LTEXT           "Edit", -1, 28, 100, 20, 8
+        GROUPBOX        "", -1, 75, 7, 75, 50
+    END
+END

@@ -1,0 +1,14 @@
+DLGINCLUDE 2 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE FILEDELETEID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Confirm Delete", FILEDELETEID, 90, 30, 195, 84, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LISTBOX         DELETELISTID, 5, 30, 180, 40
+        LTEXT           "Double Click on Item to Remove from List", -1, 5,
+                        75, 185, 8
+        PUSHBUTTON      "Delete", DELETEID, 130, 5, 40, 14
+        PUSHBUTTON   "Cancel", CANCELDELETEID, 20, 5, 40, 14
+    END
+END

@@ -1,0 +1,20 @@
+DLGINCLUDE 11 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE ARCHIVERID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Archiver", ARCHIVERID, 0,0,0,0, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", ZIPID, 26, 86, 108, 8, ES_MARGIN
+        ENTRYFIELD      "", ZIPPARMSID, 26, 66, 108, 8, ES_MARGIN
+        LTEXT           "Program Name", -1, 24, 96, 66, 8
+        LTEXT           "Parameters", -1, 26, 76, 52, 8
+        GROUPBOX        "Info-Zip's Zip 2.1", -1, 12, 60, 136, 52
+        ENTRYFIELD      "", UNZIPID, 26, 32, 108, 8, ES_MARGIN
+        ENTRYFIELD      "", UNZIPPARMSID, 26, 12, 108, 8, ES_MARGIN
+        LTEXT           "Program Name", -1, 24, 42, 66, 8
+        LTEXT           "Parameters", -1, 24, 22, 54, 8
+        GROUPBOX        "Info-Zip's UnZip 5.2", -1, 12, 6, 136, 52
+    END
+END
+

@@ -1,0 +1,26 @@
+DLGINCLUDE 21 "H:\work\ffIDs.h"
+
+DLGTEMPLATE REFRESHID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Timed Refresh Options", REFRESHID, 0, 0, 0, 0, NOT
+            FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        AUTOCHECKBOX    "Directories", FILESLISTINGID, 14, 69, 66, 10
+        CONTROL         "", DIRECTORYINTERVALID, 90, 69, 38, 12,
+                        WC_SPINBUTTON, SPBS_ALLCHARACTERS | SPBS_NUMERICONLY |
+                        SPBS_MASTER | SPBS_SERVANT | SPBS_JUSTDEFAULT |
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        AUTOCHECKBOX    "Drive List", DRIVELISTINGID, 14, 44, 64, 10
+        CONTROL         "", DRIVEINTERVALID, 90, 44, 38, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_NUMERICONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "", -1, 9, 64, 131, 25
+        LTEXT           "Refresh Intervals in Seconds", -1, 12, 88, 133, 8
+        GROUPBOX        "", -1, 9, 38, 131, 25
+        LTEXT           "These options are useful", -1, 13, 27, 131, 8
+        LTEXT           "for networked situations", -1, 16, 19, 125, 8
+        LTEXT           "Timed Refresh Options", -1, 12, 98, 123, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00000000L
+    END
+END

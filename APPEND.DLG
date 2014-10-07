@@ -1,0 +1,24 @@
+DLGINCLUDE 23 "H:\work\ffIDs.h"
+
+DLGTEMPLATE APPENDID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Append Files", APPENDID, -61, -16, 193, 179, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", APPENDNAMEID, 14, 26, 167, 8, ES_MARGIN
+        LTEXT           "Append file(s) in list to:", -1, 13, 38, 124, 8
+        PUSHBUTTON      "Cancel", APPENDCANCELID, 144, 5, 40, 14
+        DEFPUSHBUTTON   "Append", APPENDOKID, 11, 5, 40, 14
+        LISTBOX         APPENDLISTID, 12, 99, 170, 67
+        LTEXT           "File(s) to be appended to target:", -1, 13, 167,
+                        156, 8
+        LTEXT           "or enter a new target name (below).", -1, 18, 54,
+                        160, 8
+        PUSHBUTTON      "Help", APPENDHELPID, 80, 5, 40, 14
+        LTEXT           "Select a target file from list (above)", -1, 18, 61,
+                        166, 11
+        GROUPBOX        "", -1, 11, 51, 172, 29
+        AUTOCHECKBOX    "Delete source files after appending",
+                        APPENDDELETEID, 13, 81, 170, 10
+    END
+END

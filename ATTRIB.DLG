@@ -1,0 +1,50 @@
+DLGINCLUDE 6 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE ATTRIBID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Change File Attributes", ATTRIBID, 90, 10, 215, 140, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "Read Only", ATTRIBROID, 5, 70, 55, 10
+        AUTOCHECKBOX    "Hidden", ATTRIBHID, 65, 70, 40, 10
+        AUTOCHECKBOX    "System", ATTRIBSID, 110, 70, 45, 10
+        AUTOCHECKBOX    "Archive", ATTRIBAID, 160, 70, 45, 10
+        LISTBOX         ATTRIBFILEID, 5, 85, 195, 40
+        PUSHBUTTON      "Change Attributes", ATTRCHANGEID, 5, 25, 85, 14
+        CONTROL         "", MONTHID, 5, 45, 25, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", DAYID, 40, 45, 25, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", YEARID, 75, 45, 25, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", HOURID, 110, 45, 25, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", MINUTEID, 145, 45, 25, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        CONTROL         "", AMPMID, 180, 45, 30, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_READONLY | SPBS_MASTER |
+                        SPBS_SERVANT | SPBS_JUSTDEFAULT | WS_GROUP |
+                        WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Double Click on File to Remove from List", -1, 5,
+                        130, 195, 8
+        PUSHBUTTON      "Change Date/Time", DAYCHANGEID, 5, 5, 85, 14
+        PUSHBUTTON      "Change Both", BOTHCHANGEID, 125, 25, 75, 14
+        PUSHBUTTON      "Cancel", ATTRCANCELID, 160, 5, 40, 14
+        LTEXT           "Month", -1, 5, 60, 30, 8
+        LTEXT           "Day", -1, 40, 60, 20, 8
+        LTEXT           "Year", -1, 75, 60, 20, 8
+        LTEXT           "Hour", -1, 110, 60, 20, 8
+        LTEXT           "Minute", -1, 145, 60, 30, 8
+        LTEXT           "a/p", -1, 180, 60, 20, 8
+    END
+END

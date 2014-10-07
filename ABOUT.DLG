@@ -1,0 +1,17 @@
+DLGINCLUDE 14 "H:\work\ffIDs.h"
+
+DLGTEMPLATE ABOUTID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "About File Freedom", ABOUTID, 88, 12, 180, 104, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL         ABOUT1TEXTID, -1, 10, 82, 21, 16, WC_STATIC,
+                        SS_BITMAP | WS_GROUP | WS_VISIBLE
+        CTEXT           "File Freedom 2.02", -1, 37, 60, 101, 8
+        CTEXT           "(C) Copyright Bruce Henry 1996, 1999", -1, 8, 48,
+                        166, 8
+        CTEXT           "Red Paint Software   ", -1, 48, 36, 98, 8
+        CTEXT           "FreeWare Edition", ABOUT1TEXTID, 6, 18, 166, 8
+        CTEXT           "", ABOUT2TEXTID, 4, 8, 172, 8
+    END
+END

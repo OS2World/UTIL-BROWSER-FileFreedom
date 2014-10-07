@@ -1,0 +1,66 @@
+                ADDING ICONS TO PUSHBUTTON CONTROLS
+                ____________________________________
+
+Adding a Icon to a pushbutton would be a straightforward job I thought since I
+could find no documentation for it with my Watcom C++ 10.0 package and only
+vague references to how simple it was in any of the reference books I had.
+Following is the solution I pieced together.
+
+First, declare a 'BTNCDATA' structure.  I found that Watcom would not recognize
+my structure even though it was defined and included.  My solution was to clone
+the structure and give it another name.
+
+typedef struct _MYBTNCDATA /* Clone of BTNCDATA */
+    {
+     USHORT cb;
+     USHORT fsCheckState;
+     USHORT fsHiliteState;
+     LHANDLE hImage;
+    } MYBTNCDATA, *PMYBTNCDATA;
+
+MYBTNCDATA bdata; /* My structure declaration */
+
+
+There is probably some simple answer to this problem that I am unaware of and
+regardless, a 'BTNCDATA' type structure is needed.
+
+Next, declare a 'HPOINTER' handle which is a handle to a Pointer (pointing
+device pointer) which is used because it is the same format as an Icon.
+
+HPOINTER hicon; /* My Pointer declaration */
+
+Now, add a line to your resource file that gives an ID to the Icon such as
+"ICON 1234 my.ico" The keyword 'ICON' must be used.  If you have defined an ID
+somewhere else eg.  "#define iconID 1234", then you can substitute the
+definition instead.
+
+
+Now we are ready to use these pieces to get a handle for our icon and set the
+values for our structure constituents.  Be sure to set the PushButton style as
+'BS_ICON' and include a reference to the 'BTNCDATA' object as the second-last
+parameter in the 'WinCreateWindow' function.
+
+
+          hicon= WinLoadPointer (HWND_DESKTOP, 0, iconID);
+          memset ( &bdata, 0, sizeof (MYBTNCDATA));
+          data.cb = sizeof (MYBTNCDATA);
+          bdata.fsCheckState = NULL;
+          bdata.fsHiliteState = 0;
+          bdata.hImage = hicon;
+
+hwndPushB = WinCreateWindow (
+             hwndChildWindow,         // Parent window handle
+             WC_BUTTON,               // Window class
+            "Icon",                   // Window text
+             WS_PARENTCLIP |          // Window style (can be 'or'ed
+             WS_CLIPSIBLINGS |        // with window class specific options)
+             BS_PUSHBUTTON | BS_NOPOINTERFOCUS | BS_ICON,
+
+             0, 0,                    // Initial position of window
+             32,32,                   // Initial size of window
+             hwndCLIENT,              // Owner window handle
+             HWND_BOTTOM,             // Placement window handle
+             idCHILD,                 // Child window ID // (keep unique)
+             &bdata,                  // Control data
+             NULL );                  // Presentation parameters
+

@@ -1,0 +1,15 @@
+DLGINCLUDE 9 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE PATHSID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Default paths", PATHSID, 84, 34, 156, 110, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", PATHSOURCEID, 14, 70, 128, 8, ES_MARGIN
+        GROUPBOX        "Default Source Path", -1, 6, 60, 144, 32
+        ENTRYFIELD      "", PATHDESTINATIONID, 14, 32, 128, 8, ES_MARGIN
+        GROUPBOX        "Default Destination Path", -1, 6, 22, 144, 32
+        LTEXT           "These are the Start-up Paths", -1, 12, 6, 132, 10
+    END
+END
+

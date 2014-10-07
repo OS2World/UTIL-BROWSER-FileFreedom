@@ -1,0 +1,20 @@
+DLGINCLUDE 1 "ffIDs.h"
+
+DLGTEMPLATE FILECOPYID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Copy Files", FILECOPYID, 90, 10, 148, 119, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Destination Path", -1, 10, 105, 85, 8
+        PUSHBUTTON      "OK", COPYOKID, 105, 30, 30, 14, BS_NOPOINTERFOCUS
+        ENTRYFIELD      "", COPYTOFILENAMEID, 12, 67, 126, 8, ES_MARGIN
+        ENTRYFIELD      "", COPYTOPATHID, 12, 92, 126, 8, ES_MARGIN
+        PUSHBUTTON      "Cancel", COPYCANCELID, 10, 5, 40, 14, NOT
+                        WS_TABSTOP
+        PUSHBUTTON      "Help", COPYHELPID, 95, 5, 40, 14, BS_NOPOINTERFOCUS
+        LTEXT           "Filename", -1, 10, 80, 45, 8
+        DEFPUSHBUTTON   "Accept Path/Name", COPYDEFAULTID, 10, 30, 85, 14
+        AUTOCHECKBOX    "Replace Existing Files", COPYREPLACEID, 10, 50, 115,
+                        10, BS_NOPOINTERFOCUS
+    END
+END

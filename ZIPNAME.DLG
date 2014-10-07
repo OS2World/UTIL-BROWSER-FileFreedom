@@ -1,0 +1,17 @@
+DLGINCLUDE 13 "H:\work\ffIDs.h"
+
+DLGTEMPLATE INPUTZIPNAMEID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Zip Name Input", INPUTZIPNAMEID, 104, 4, 142, 136, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", ZIPNAMEID, 14, 38, 114, 8, ES_MARGIN
+        LTEXT           "Enter New Name for Zip File", -1, 12, 52, 124, 8
+        LTEXT           "(Extension not required)", -1, 12, 24, 104, 8
+        PUSHBUTTON      "Cancel", ZIPNAMECANCELID, 88, 4, 40, 14
+        DEFPUSHBUTTON   "Accept", ZIPNAMEACCEPTID, 12, 4, 40, 14
+        LISTBOX         ZIPLISTID, 12, 64, 116, 48
+        LTEXT           "Choose Zip from List or", -1, 12, 124, 120, 8
+        LTEXT           "Enter New Name below", -1, 12, 116, 120, 8
+    END
+END

@@ -1,0 +1,19 @@
+DLGINCLUDE 20 "H:\work\ffIDs.h"
+
+DLGTEMPLATE VOLUMELABELID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Modify Volume Label", VOLUMELABELID, 124, 21, 159, 97,
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        CONTROL         "", DRIVELISTID, 118, 23, 32, 65, WC_COMBOBOX,
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        ENTRYFIELD      "", LABELFIELDID, 43, 41, 70, 8, ES_MARGIN
+        LTEXT           "Select Drive", -1, 48, 78, 61, 8
+        LTEXT           "Create or Modify Volume", -1, 8, 54, 119, 8
+        LTEXT           "Label", -1, 9, 41, 31, 8
+        PUSHBUTTON      "Accept", ACCEPTLABELID, 9, 6, 42, 14
+        PUSHBUTTON      "Cancel", CANCELLABELID, 97, 6, 40, 14
+        GROUPBOX        "", -1, 3, 31, 152, 40
+    END
+END

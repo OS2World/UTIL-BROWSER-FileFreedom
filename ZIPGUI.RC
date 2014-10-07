@@ -1,0 +1,34 @@
+#include <os2.h>
+#include "zipgui.h"
+
+ICON ZIPWINDOWID filefrdm.ico
+
+MENU ZIPWINDOWID
+
+BEGIN
+   SUBMENU "~File",  FILE_MID,      ,
+   BEGIN
+      MENUITEM "~View File\tEnter", VIEW_MID,   ,
+      MENUITEM "E~xtract File to Destination without archived Path\tSpaceBar", EXTRACT_MID,    ,
+      MENUITEM "Extract File to Destination and build archived ~Path\tShift+SpaceBar", EXTRACTTOPATH_MID,    ,
+      MENUITEM "~Delete File from Zip\tDel", DELETE_MID,    ,
+      MENUITEM "View Zip File ~Comment\tCtrl+C", COMMENT_MID,   ,
+      MENUITEM "~Quit\tCtrl+Q", QUIT_MID,    ,
+   END
+   SUBMENU "~Help",  HELPMENU_MID,     ,
+   BEGIN
+      MENUITEM "General Help", HELP_MID,      ,
+   END
+END
+
+ACCELTABLE ZIPWINDOWID
+BEGIN
+   "c", COMMENT_MID, CONTROL
+   "C", COMMENT_MID, CONTROL
+   "Q", QUIT_MID, CONTROL
+   "q", QUIT_MID, CONTROL
+   VK_SPACE, EXTRACT_MID, VIRTUALKEY
+   VK_SPACE, EXTRACTTOPATH_MID, VIRTUALKEY, SHIFT
+   VK_DELETE, DELETE_MID, VIRTUALKEY
+END
+

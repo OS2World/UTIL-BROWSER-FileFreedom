@@ -1,0 +1,17 @@
+DLGINCLUDE 19 "H:\work\ffIDs.h"
+
+DLGTEMPLATE DIRHISTORYID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Directory Bookmarks", DIRHISTORYID, 65, -17, 222, 142,
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Double-Click on Directory to Select", -1, 7, 107,
+                        208, 8
+        LISTBOX         HISTORYLISTID, 6, 23, 209, 86
+        PUSHBUTTON      "Cancel", CANCELHISTORYID, 177, 4, 40, 14
+        PUSHBUTTON      "Add Bookmark", ADDBOOKMARKID, 137, 120, 72, 14
+        LTEXT           "Add current Directory to list", -1, 9, 123, 125, 8
+        PUSHBUTTON      "Help", BOOKMARKHELPID, 6, 4, 40, 14
+        GROUPBOX        "", -1, 5, 118, 213, 22
+    END
+END

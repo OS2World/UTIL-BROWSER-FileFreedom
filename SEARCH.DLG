@@ -1,0 +1,14 @@
+DLGINCLUDE 22 "H:\work\ffIDs.h"
+
+DLGTEMPLATE SEARCHID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Search Tool Set-Up", SEARCHID, 0, 0, 0, 0, NOT
+            FS_DLGBORDER | WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", SEARCHTOOLNAMEID, 24, 82, 106, 8, ES_MARGIN
+        GROUPBOX        "Search Tool Name", -1, 8, 66, 140, 40
+        ENTRYFIELD      "", STPARMSID, 24, 38, 106, 8, ES_MARGIN
+        LTEXT           "Command Line Parameters", -1, 20, 50, 118, 8
+        LTEXT           "(If Required)", -1, 24, 26, 60, 8
+    END
+END

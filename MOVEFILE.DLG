@@ -1,0 +1,18 @@
+DLGINCLUDE 5 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE MOVEFILESID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Move Files", MOVEFILESID, 90, 10, 190, 122, WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Double Click on File to Remove From List", 901, 5,
+                        85, 185, 8
+        LISTBOX         MOVELISTID, 5, 40, 180, 40
+        PUSHBUTTON      "Cancel", CANCELMOVEID, 5, 5, 40, 14
+        PUSHBUTTON      "Move", MOVEID, 145, 5, 40, 14
+        AUTOCHECKBOX    "Overwrite Existing Files", FORCEDMOVEID, 5, 25, 120,
+                        10
+        LTEXT           "Destination Path", -1, 6, 110, 78, 8
+        ENTRYFIELD      "", MOVEDESTID, 8, 98, 176, 8, ES_MARGIN
+    END
+END

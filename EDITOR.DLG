@@ -1,0 +1,15 @@
+DLGINCLUDE 10 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE EDITORID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Editor Set-Up", EDITORID, 0, 0, 0, 0, NOT FS_DLGBORDER | 
+            WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", EDITORNAMEID, 24, 66, 106, 8, ES_MARGIN
+        GROUPBOX        "Editor Name", -1, 8, 50, 140, 40
+        ENTRYFIELD      "", EDITORPARMSID, 24, 22, 106, 8, ES_MARGIN
+        LTEXT           "Command Line Parameters", -1, 20, 34, 118, 8
+        LTEXT           "(If Required)", -1, 24, 10, 60, 8
+    END
+END
+

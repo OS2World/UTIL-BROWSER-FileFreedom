@@ -1,0 +1,17 @@
+DLGINCLUDE 4 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE RENAMEITEMID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Rename File or Directory", RENAMEITEMID, 100, 20, 148, 94,
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Enter New Name", -1, 5, 60, 80, 8
+        ENTRYFIELD      "", ENTERRENAMEID, 7, 47, 131, 8, ES_MARGIN
+        DEFPUSHBUTTON   "Accept Name", ACCEPTRENAMEID, 5, 25, 75, 14
+        PUSHBUTTON      "OK", RENAMEOKID, 100, 25, 40, 14
+        PUSHBUTTON      "Cancel", RENAMECANCELID, 5, 5, 40, 14
+        ENTRYFIELD      "", OLDNAMEID, 7, 72, 131, 8, ES_MARGIN |
+                        ES_READONLY | NOT WS_TABSTOP
+        LTEXT           "Current Name", -1, 5, 85, 65, 8
+    END
+END

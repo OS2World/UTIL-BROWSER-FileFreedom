@@ -1,0 +1,21 @@
+DLGINCLUDE 26 "H:\WORK\ffIDs.h"
+
+DLGTEMPLATE USER7ID LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "USER PROGRAMS", USER7ID, 0,0,0,0, NOT FS_DLGBORDER |
+            WS_VISIBLE
+    BEGIN
+        ENTRYFIELD      "", USERSEVENID, 16, 85, 116, 8, ES_MARGIN
+        ENTRYFIELD      "", USERSEVENPARMSID, 16, 33, 116, 8, ES_MARGIN
+        LTEXT           "Path and File Name", -1, 14, 95, 100, 8
+        LTEXT           "Parameters", -1, 14, 43, 100, 8
+        GROUPBOX        "User Program 7", -1, 6, 61, 136, 50
+        LTEXT           "Working Directory", -1, 14, 22, 92, 8
+        ENTRYFIELD      "", USERSEVENDIRID, 16, 12, 116, 8, ES_MARGIN
+        GROUPBOX        "Optional", -1, 6, 4, 136, 56
+        ENTRYFIELD      "", USERSEVENMENUNAMEID, 54, 69, 77, 8, ES_MARGIN
+        LTEXT           "Menu", -1, 17, 73, 26, 8
+        LTEXT           "Name", -1, 17, 65, 27, 8
+    END
+END
+
