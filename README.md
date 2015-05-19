@@ -9,7 +9,7 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* 
+*  Watcom's C++ v10.0
  
 AUTHORS
 ===============
